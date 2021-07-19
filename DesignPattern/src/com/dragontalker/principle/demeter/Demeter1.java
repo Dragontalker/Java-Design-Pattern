@@ -7,8 +7,9 @@ import java.util.List;
 public class Demeter1 {
 
     public static void main(String[] args) {
-
+        // 创建了一个SchoolManager对象
         SchoolManager schoolManager = new SchoolManager();
+        // 输出学院的员工id 和 学校总部的员工信息
         schoolManager.printAllEmployee(new CollegeManager());
     }
 }
