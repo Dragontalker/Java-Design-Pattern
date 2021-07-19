@@ -1,5 +1,8 @@
 package com.dragontalker.principle.demeter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // 客户端
 public class Demeter1 {
 
@@ -31,5 +34,18 @@ class CollegeEmployee {
 
     public void setId(String id) {
         this.id = id;
+    }
+}
+
+// 管理学院员工的管理类
+class CollegeManager {
+    public List<CollegeEmployee> getAllEmployee() {
+        List<CollegeEmployee> list = new ArrayList<CollegeEmployee>();
+        for (int i = 0; i < 10; i++) {
+            CollegeEmployee emp = new CollegeEmployee();
+            emp.setId("学院员工id=" + i);
+            list.add(emp);
+        }
+        return list;
     }
 }
