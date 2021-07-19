@@ -26,10 +26,7 @@ public class DependencyPass {
 //    }
 //}
 
-
-
-class SmartTV implements ITV {
-    public void play() {
-        System.out.println("智能电视: 播放中...");
-    }
+// 方式2: 通过构造方法依赖传递
+interface IOpenAndClose {
+    void open(); // 抽象方法, 接收接口
 }
