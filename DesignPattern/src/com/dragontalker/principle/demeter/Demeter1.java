@@ -8,6 +8,8 @@ public class Demeter1 {
 
     public static void main(String[] args) {
 
+        SchoolManager schoolManager = new SchoolManager();
+        schoolManager.printAllEmployee(new CollegeManager());
     }
 }
 
@@ -76,7 +78,7 @@ class SchoolManager {
 
         // 获取到学校总部员工
         List<Employee> list2 = this.getAllEmployee();
-        System.out.println("----------分公司员工----------");
+        System.out.println("----------总公司员工----------");
         for (Employee e : list2) {
             System.out.println(e.getId());
         }
