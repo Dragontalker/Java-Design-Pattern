@@ -17,6 +17,6 @@ class Email {
 // 方式1完成
 class Person {
     public void receive(Email email) {
-
+        System.out.println(email.getInfo());
     }
 }
