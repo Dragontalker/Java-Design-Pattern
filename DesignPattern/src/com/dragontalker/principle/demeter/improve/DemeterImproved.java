@@ -86,6 +86,7 @@ class SchoolManager {
 
         // 分析问题
         // 1. 将输出学院的员工方法, 封装到CollegeManager
+        sub.printEmployee();
 
         // 获取到学校总部员工
         List<Employee> list2 = this.getAllEmployee();
