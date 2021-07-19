@@ -44,7 +44,7 @@ class CollegeEmployee {
 class CollegeManager {
     // 返回学院的所有员工
     public List<CollegeEmployee> getAllEmployee() {
-        List<CollegeEmployee> list = new ArrayList<CollegeEmployee>();
+        List<CollegeEmployee> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) { // 这里我们增加了10个员工到list
             CollegeEmployee emp = new CollegeEmployee();
             emp.setId("学院员工id=" + i);
@@ -58,7 +58,7 @@ class CollegeManager {
 class SchoolManager {
     // 返回学校总部的员工
     public List<Employee> getAllEmployee() {
-        List<Employee> list = new ArrayList<Employee>();
+        List<Employee> list = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
             Employee emp = new Employee();
