@@ -1,6 +1,6 @@
 package com.dragontalker.principle.inversion.improve;
 
-public class DependencyInversionImprove1 {
+public class DependencyInversionImprovement {
 
     public static void main(String[] args) {
 
