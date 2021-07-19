@@ -42,8 +42,9 @@ class GraphicEditor {
 }
 
 // Shape类, 基类
-class Shape {
+abstract class Shape {
     int m_type;
+    public abstract void draw();
 }
 
 class Rectangle extends Shape {
