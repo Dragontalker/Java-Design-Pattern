@@ -22,10 +22,12 @@ class GraphicEditor {
         }
     }
 
+    // 绘制矩形
     public void drawRectangle(Shape r) {
         System.out.println("绘制矩形");
     }
 
+    // 绘制圆形
     public void drawCircle(Shape r) {
         System.out.println("绘制圆形");
     }
