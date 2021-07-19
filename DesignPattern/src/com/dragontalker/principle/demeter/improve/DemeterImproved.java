@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 客户端
-public class Demeter1 {
+public class DemeterImproved {
 
     public static void main(String[] args) {
         // 创建了一个SchoolManager对象
@@ -52,6 +52,16 @@ class CollegeManager {
         }
         return list;
     }
+
+    // 输出学院员工的信息
+    public void printEmployee() {
+        // 获取到学院员工
+        List<CollegeEmployee> list1 = this.getAllEmployee();
+        System.out.println("----------分公司员工----------");
+        for (CollegeEmployee e : list1) {
+            System.out.println(e.getId());
+        }
+    }
 }
 
 // 学校管理类
@@ -74,17 +84,8 @@ class SchoolManager {
     // 该方法完成输出学校总部和学院员工信息的方法
     void printAllEmployee(CollegeManager sub) {
 
-        // 分析问题:
-        // 1. 这里的CollegeEmployee 不是 SchoolManager 的直接朋友
-        // 2. CollegeEmployee 是以局部变量方式出现在 SchoolManager中
-        // 3. 违反了 迪米特法则
-
-        // 获取到学院员工
-        List<CollegeEmployee> list1 = sub.getAllEmployee();
-        System.out.println("----------分公司员工----------");
-        for (CollegeEmployee e : list1) {
-            System.out.println(e.getId());
-        }
+        // 分析问题
+        // 1. 将输出学院的员工方法, 封装到CollegeManager
 
         // 获取到学校总部员工
         List<Employee> list2 = this.getAllEmployee();
