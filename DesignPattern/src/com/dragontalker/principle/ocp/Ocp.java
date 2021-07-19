@@ -4,6 +4,10 @@ public class Ocp {
 
     public static void main(String[] args) {
 
+        // 使用, 看看存在的问题是什么
+        GraphicEditor graphicEditor = new GraphicEditor();
+        graphicEditor.drawShape(new Rectangle());
+        graphicEditor.drawShape(new Circle());
     }
 }
 
@@ -19,11 +23,11 @@ class GraphicEditor {
     }
 
     public void drawRectangle(Shape r) {
-        System.out.println("矩形");
+        System.out.println("绘制矩形");
     }
 
     public void drawCircle(Shape r) {
-        System.out.println("圆形");
+        System.out.println("绘制圆形");
     }
 }
 
