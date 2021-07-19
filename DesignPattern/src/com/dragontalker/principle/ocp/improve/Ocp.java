@@ -17,7 +17,7 @@ class GraphicEditor {
 
     // 需要增加: 绘制三角形
     public void drawTriangle(Shape r) {
-        System.out.println("绘制三角形");
+
     }
 }
 
@@ -45,7 +45,9 @@ class Circle extends Shape {
 
 // 新增画三角形的类
 class Triangle extends Shape {
-    Triangle() {
-        super.m_type = 3;
+
+    @Override
+    public void draw() {
+        System.out.println("绘制三角形");
     }
 }
