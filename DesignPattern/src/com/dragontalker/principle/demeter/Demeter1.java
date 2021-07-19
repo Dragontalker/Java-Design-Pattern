@@ -56,8 +56,8 @@ class CollegeManager {
 
 // 学校管理类
 
-// 分析 SchoolManager 类的直接朋友有哪些:
-// 有 Employee, CollegeManager
+// 分析 SchoolManager 类的直接朋友有哪些: 有 Employee, CollegeManager
+// CollegeEmployee 不是直接朋友, 而是一个陌生类, 以局部变量的形式出现 ===>  这样违背了 迪米特法则
 class SchoolManager {
     // 返回学校总部的员工
     public List<Employee> getAllEmployee() {
