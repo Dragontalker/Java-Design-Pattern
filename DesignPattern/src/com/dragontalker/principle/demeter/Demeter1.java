@@ -50,3 +50,17 @@ class CollegeManager {
         return list;
     }
 }
+
+// 学校管理类
+class SchoolManager {
+    public List<Employee> getAllEmployee() {
+        List<Employee> list = new ArrayList<Employee>();
+
+        for (int i = 0; i < 5; i++) {
+            Employee emp = new Employee();
+            emp.setId("学校总部员工id=" + i);
+            list.add(emp);
+        }
+        return list;
+    }
+}
