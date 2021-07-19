@@ -6,6 +6,7 @@ public class DependencyInversion {
 
         Person person = new Person();
         person.receive(new Email());
+        person.receive(new WeiXin());
     }
 }
 
@@ -17,6 +18,12 @@ interface IReceiver {
 class Email implements IReceiver{
     public String getInfo() {
         return "电子邮件信息: Hello, world!";
+    }
+}
+
+class WeiXin implements IReceiver{
+    public String getInfo() {
+        return "微信信息: Hello, world!";
     }
 }
 
