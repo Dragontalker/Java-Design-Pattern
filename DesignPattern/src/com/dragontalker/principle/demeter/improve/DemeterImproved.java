@@ -7,6 +7,7 @@ import java.util.List;
 public class DemeterImproved {
 
     public static void main(String[] args) {
+        System.out.println("使用迪米特法则的改进");
         // 创建了一个SchoolManager对象
         SchoolManager schoolManager = new SchoolManager();
         // 输出学院的员工id 和 学校总部的员工信息
