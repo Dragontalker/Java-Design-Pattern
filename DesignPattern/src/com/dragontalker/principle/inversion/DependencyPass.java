@@ -3,10 +3,11 @@ package com.dragontalker.principle.inversion;
 public class DependencyPass {
 
     public static void main(String[] args) {
-        OpenAndClose openAndClose = new OpenAndClose(new ITV() {
+        IOpenAndClose openAndClose = new OpenAndClose();
+        openAndClose.setTv(new ITV() {
             @Override
             public void play() {
-                System.out.println("电视播放....");
+                System.out.println("setter方法创建的电视播放....");
             }
         });
         openAndClose.open();
@@ -50,3 +51,25 @@ public class DependencyPass {
 //        this.tv.play();
 //    }
 //}
+
+// 方式3: 通过setter方法传递
+interface IOpenAndClose {
+    void open();
+    void setTv(ITV tv);
+}
+
+interface ITV {
+    void play();
+}
+
+class OpenAndClose implements IOpenAndClose {
+    private ITV tv;
+
+    public void setTv(ITV tv) {
+        this.tv = tv;
+    }
+
+    public void open() {
+        this.tv.play();
+    }
+}
