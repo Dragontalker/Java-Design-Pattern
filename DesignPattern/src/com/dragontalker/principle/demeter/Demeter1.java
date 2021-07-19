@@ -64,4 +64,21 @@ class SchoolManager {
         }
         return list;
     }
+
+    // 该方法完成输出学校总部和学院员工信息的方法
+    void printAllEmployee(CollegeManager sub) {
+        // 获取到学院员工
+        List<CollegeEmployee> list1 = sub.getAllEmployee();
+        System.out.println("----------分公司员工----------");
+        for (CollegeEmployee e : list1) {
+            System.out.println(e.getId());
+        }
+
+        // 获取到学校总部员工
+        List<Employee> list2 = this.getAllEmployee();
+        System.out.println("----------分公司员工----------");
+        for (Employee e : list2) {
+            System.out.println(e.getId());
+        }
+    }
 }
