@@ -49,3 +49,10 @@ class Circle extends Shape {
         super.m_type = 2;
     }
 }
+
+// 新增画三角形的类
+class Triangle extends Shape {
+    Triangle() {
+        super.m_type = 3;
+    }
+}
