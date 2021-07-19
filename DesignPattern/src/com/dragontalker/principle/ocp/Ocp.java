@@ -8,6 +8,7 @@ public class Ocp {
         GraphicEditor graphicEditor = new GraphicEditor();
         graphicEditor.drawShape(new Rectangle());
         graphicEditor.drawShape(new Circle());
+        graphicEditor.drawShape(new Triangle());
     }
 }
 
