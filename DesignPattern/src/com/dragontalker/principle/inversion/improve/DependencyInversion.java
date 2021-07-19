@@ -9,6 +9,11 @@ public class DependencyInversion {
     }
 }
 
+// 定义接口
+interface IReceiver {
+    public String getInfo();
+}
+
 class Email {
     public String getInfo() {
         return "电子邮件信息: Hello, world!";
