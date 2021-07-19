@@ -42,7 +42,7 @@ interface ITV { // ITV接口
 class OpenAndClose implements IOpenAndClose {
     public ITV tv;
 
-    public OpenAndClose(ITV tv) {
+    public OpenAndClose(ITV tv) { // 构造器传递
         this.tv = tv;
     }
 
