@@ -55,6 +55,9 @@ class CollegeManager {
 }
 
 // 学校管理类
+
+// 分析 SchoolManager 类的直接朋友有哪些:
+// 有 Employee, CollegeManager
 class SchoolManager {
     // 返回学校总部的员工
     public List<Employee> getAllEmployee() {
