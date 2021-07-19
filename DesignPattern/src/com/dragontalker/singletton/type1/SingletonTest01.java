@@ -11,4 +11,9 @@ class Singleton {
     private Singleton() {
 
     }
+
+    // 2. 本类内部创建对象实例
+    private final static Singleton instance = new Singleton();
+
+
 }
