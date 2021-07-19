@@ -15,15 +15,14 @@ public class Ocp {
 // 这是一个用于绘图的类[使用方]
 class GraphicEditor {
 
-    // 需要增加: 绘制三角形
-    public void drawTriangle(Shape r) {
-
+    // 接收Shape对象, 然后根据type, 来绘制不同的图形
+    public void drawShape(Shape s) {
+        s.draw();
     }
 }
 
 // Shape类, 基类
 abstract class Shape {
-    int m_type;
     public abstract void draw();
 }
 
