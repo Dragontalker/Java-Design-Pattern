@@ -39,6 +39,7 @@ class CollegeEmployee {
 
 // 管理学院员工的管理类
 class CollegeManager {
+    // 返回学院的所有员工
     public List<CollegeEmployee> getAllEmployee() {
         List<CollegeEmployee> list = new ArrayList<CollegeEmployee>();
         for (int i = 0; i < 10; i++) {
