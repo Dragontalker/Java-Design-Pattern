@@ -29,5 +29,10 @@ class Vehicle2 {
     public void runWater(String vehicle) {
         System.out.println(vehicle + "在水中上运行....");
     }
+
+    // 方法2
+    // ...
+    // ...
+    // ...
 }
 
