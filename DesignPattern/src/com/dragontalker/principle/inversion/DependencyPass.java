@@ -4,7 +4,8 @@ public class DependencyPass {
 
     public static void main(String[] args) {
         IOpenAndClose openAndClose = new OpenAndClose();
-        openAndClose.setTv(() -> System.out.println("setter方法创建的电视播放...."));
+        ChangHong tv = new ChangHong();
+        openAndClose.setTv(tv);
         openAndClose.open();
     }
 }
@@ -55,6 +56,14 @@ interface IOpenAndClose {
 
 interface ITV {
     void play();
+}
+
+class ChangHong implements ITV {
+
+    @Override
+    public void play() {
+        System.out.println("长虹电视机打开了...");
+    }
 }
 
 class OpenAndClose implements IOpenAndClose {
