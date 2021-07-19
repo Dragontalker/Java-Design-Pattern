@@ -67,3 +67,5 @@ class D implements Interface1 {
         System.out.println("D 实现了 operation5....");
     }
 }
+
+
