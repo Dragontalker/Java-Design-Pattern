@@ -23,11 +23,11 @@ class GraphicEditor {
 }
 
 // Shape类, 基类
-abstract class Shape {
-    public abstract void draw();
+interface Shape {
+    void draw();
 }
 
-class Rectangle extends Shape {
+class Rectangle implements Shape {
 
     @Override
     public void draw() {
@@ -35,7 +35,7 @@ class Rectangle extends Shape {
     }
 }
 
-class Circle extends Shape {
+class Circle implements Shape {
 
     @Override
     public void draw() {
@@ -44,7 +44,7 @@ class Circle extends Shape {
 }
 
 // 新增画三角形的类
-class Triangle extends Shape {
+class Triangle implements Shape {
 
     @Override
     public void draw() {
@@ -53,7 +53,7 @@ class Triangle extends Shape {
 }
 
 // 新增一个图形
-class OtherGraphic extends Shape {
+class OtherGraphic implements Shape {
 
     @Override
     public void draw() {
