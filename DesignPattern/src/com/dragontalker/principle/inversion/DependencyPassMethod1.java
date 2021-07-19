@@ -3,7 +3,9 @@ package com.dragontalker.principle.inversion;
 public class DependencyPassMethod1 {
 
     public static void main(String[] args) {
-
+        ITV tv = new SmartTV();
+        IOpenAndClose openAndClose = new OpenAndClose();
+        openAndClose.open(tv);
     }
 }
 
