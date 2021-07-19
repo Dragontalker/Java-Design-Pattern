@@ -11,17 +11,17 @@ public class DependencyInversion {
 
 // 定义接口
 interface IReceiver {
-    public String getInfo();
+    String getInfo();
 }
 
-class Email {
+class Email implements IReceiver{
     public String getInfo() {
         return "电子邮件信息: Hello, world!";
     }
 }
 
 class Person {
-    public void receive(Email email) {
-        System.out.println(email.getInfo());
+    public void receive(IReceiver receiver) {
+        System.out.println(receiver.getInfo());
     }
 }
