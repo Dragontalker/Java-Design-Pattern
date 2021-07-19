@@ -31,22 +31,22 @@ public class DependencyPass {
 //}
 
 // 方式2: 通过构造方法依赖传递
-interface IOpenAndClose {
-    void open(); // 抽象方法, 接收接口
-}
-
-interface ITV { // ITV接口
-    void play();
-}
-
-class OpenAndClose implements IOpenAndClose {
-    public ITV tv;
-
-    public OpenAndClose(ITV tv) { // 构造器传递
-        this.tv = tv;
-    }
-
-    public void open() {
-        this.tv.play();
-    }
-}
+//interface IOpenAndClose {
+//    void open(); // 抽象方法, 接收接口
+//}
+//
+//interface ITV { // ITV接口
+//    void play();
+//}
+//
+//class OpenAndClose implements IOpenAndClose {
+//    public ITV tv;
+//
+//    public OpenAndClose(ITV tv) { // 构造器传递
+//        this.tv = tv;
+//    }
+//
+//    public void open() {
+//        this.tv.play();
+//    }
+//}
