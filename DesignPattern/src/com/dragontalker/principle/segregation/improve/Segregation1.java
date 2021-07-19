@@ -9,6 +9,11 @@ public class Segregation1 {
         a.depend1(new B()); // A类通过接口去依赖B类
         a.depend2(new B());
         a.depend3(new B());
+
+        C c = new C();
+        c.depend1(new D()); // C类通过接口去依赖D类
+        c.depend4(new D());
+        c.depend5(new D());
     }
 }
 
