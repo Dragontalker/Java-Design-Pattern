@@ -9,6 +9,7 @@ public class Ocp {
         graphicEditor.drawShape(new Rectangle());
         graphicEditor.drawShape(new Circle());
         graphicEditor.drawShape(new Triangle());
+        graphicEditor.drawShape(new OtherGraphic());
     }
 }
 
@@ -48,5 +49,14 @@ class Triangle extends Shape {
     @Override
     public void draw() {
         System.out.println("绘制三角形");
+    }
+}
+
+// 新增一个图形
+class OtherGraphic extends Shape {
+
+    @Override
+    public void draw() {
+        System.out.println("绘制其他图形");
     }
 }
