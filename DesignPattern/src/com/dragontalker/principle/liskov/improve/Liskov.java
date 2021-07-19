@@ -11,9 +11,9 @@ public class Liskov {
         System.out.println("------------------------");
 
         B b = new B();
-        System.out.println("11-3=" + b.func1(11, 3));
-        System.out.println("1-8=" + b.func1(1, 8));
-        System.out.println("11+3+9=" + b.func2(11, 3));
+        System.out.println("11-3=" + b.func3(11, 3));
+        System.out.println("1-8=" + b.func3(1, 8));
+        System.out.println("11+3+9=" + b.func1(b.func1(11, 3), 9));
     }
 }
 
