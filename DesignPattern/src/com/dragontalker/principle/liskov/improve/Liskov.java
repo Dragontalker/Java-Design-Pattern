@@ -33,6 +33,9 @@ class A extends Base{
 // B类继承了A
 // 增加了一个新功能: 完成两个数相加, 然后和9求和
 class B extends Base {
+    // 如果B需要使用A类的方法, 使用组合关系
+    private A a = new A();
+
     // 这里, 重写了A类的方法, 可能是无意识
     public int func1(int a, int b) {
         return a + b;
@@ -40,5 +43,10 @@ class B extends Base {
 
     public int func2(int a, int b) {
         return func1(a, b);
+    }
+
+    // 我们仍然想使用A的方法
+    public int func3(int a, int b) {
+        return this.a.func1(a, b);
     }
 }
