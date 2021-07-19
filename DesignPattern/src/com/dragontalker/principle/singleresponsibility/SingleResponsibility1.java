@@ -10,7 +10,9 @@ public class SingleResponsibility1 {
     }
 }
 
-//交通工具类
+// 交通工具类
+// 方式1
+// 1. 在方式1的方法中, 违反了单一职责原则
 class Vehicle {
     public void run(String vehicle) {
         System.out.println(vehicle + "在公路上运行....");
