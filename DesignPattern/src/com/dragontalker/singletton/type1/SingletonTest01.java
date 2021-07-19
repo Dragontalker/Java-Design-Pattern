@@ -7,7 +7,8 @@ public class SingletonTest01 {
         // 测试
         Singleton instance1 = Singleton.getInstance();
         Singleton instance2 = Singleton.getInstance();
-        System.out.println(instance1 == instance2);
+        System.out.println(">> Hash Code of instance 1=" + instance1.hashCode());
+        System.out.println(">> Hash Code of instance 2=" + instance2.hashCode());
     }
 }
 
