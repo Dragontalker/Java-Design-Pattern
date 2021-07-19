@@ -30,3 +30,19 @@ public class DependencyPass {
 interface IOpenAndClose {
     void open(); // 抽象方法, 接收接口
 }
+
+interface ITV { // ITV接口
+    void play();
+}
+
+class OpenAndClose implements IOpenAndClose {
+    public ITV tv;
+
+    public OpenAndClose(ITV tv) {
+        this.tv = tv;
+    }
+
+    public void open() {
+        this.tv.play();
+    }
+}
