@@ -17,4 +17,9 @@ interface ITV {
     void play();
 }
 
-
+// 实现接口
+class OpenAndClose implements IOpenAndClose {
+    public void open(ITV tv) {
+        tv.play();
+    }
+}
