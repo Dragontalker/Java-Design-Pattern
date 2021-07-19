@@ -3,9 +3,13 @@ package com.dragontalker.principle.inversion;
 public class DependencyPass {
 
     public static void main(String[] args) {
-        ITV tv = new SmartTV();
-        IOpenAndClose openAndClose = new OpenAndClose();
-        openAndClose.open(tv);
+        OpenAndClose openAndClose = new OpenAndClose(new ITV() {
+            @Override
+            public void play() {
+                System.out.println("电视播放....");
+            }
+        });
+        openAndClose.open();
     }
 }
 
