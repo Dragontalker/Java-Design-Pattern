@@ -26,9 +26,6 @@ class GraphicEditor {
     }
 
     // 绘制矩形
-    public void drawRectangle(Shape r) {
-        System.out.println("绘制矩形");
-    }
 
     // 绘制圆形
     public void drawCircle(Shape r) {
@@ -48,8 +45,10 @@ abstract class Shape {
 }
 
 class Rectangle extends Shape {
-    Rectangle() {
-        super.m_type = 1;
+
+    @Override
+    public void draw() {
+        System.out.println("绘制矩形");
     }
 }
 
