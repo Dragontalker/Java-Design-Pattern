@@ -1,6 +1,15 @@
 package com.dragontalker.principle.segregation.improve;
 
 public class Segregation1 {
+
+    public static void main(String[] args) {
+
+        // 使用一把
+        A a = new A();
+        a.depend1(new B()); // A类通过接口去依赖B类
+        a.depend2(new B());
+        a.depend3(new B());
+    }
 }
 
 // 接口1
